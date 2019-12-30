@@ -1,9 +1,42 @@
-main {
-  display: grid;
-  grid-template-columns: 130px 130px 130px;
-  grid-gap: 10px;
-}
+.board-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-app-square {
-  height: 130px;
+  h1 {
+    text-transform: uppercase;
+    font-size: 6vh;
+    color: #232323;
+
+    .player {
+      font-size: 10vh;
+      color: darken($color: #0da192, $amount: 5);
+    }
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 130px 130px 130px;
+    grid-gap: 10px;
+  }
+
+  app-square {
+    height: 130px;
+  }
+
+  .restart-button {
+    padding: 15px;
+    text-transform: uppercase;
+    background-color: white;
+    color: #14bdac;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 25px 0px;
+
+    &:hover {
+      background-color: wheat;
+      color: #0da192;
+    }
+  }
 }
